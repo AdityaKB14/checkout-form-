@@ -1,0 +1,75 @@
+<html>
+<head>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+	<section class="product">
+	<form class="credit-details" action="" data-form>
+		<fieldset class="card-details_fieldset">
+			<span class="card-details_heading">Card Type</span>
+			<div class="card-details_cards" data-card-types>
+				<div class="card-details_cards-item">
+					<input class="card-details_card-input" type="radio" name="cardType" id="visa" data-card-type="visa" checked="">
+					<label class="card-details_card-label" for="visa">Visa</label>
+					<img class="card-details_cards-image" src="https://svgshare.com/i/7h2.svg" alt="Visa Card" aria-hidden="true">
+			</div>
+		</div>
+		</fieldset>
+		<fieldset class="card-details_fieldset">
+			<span class="card-details_heading">Card Number</span>
+			<div class="card-details_number">
+				<div class="card-details_number-field">
+					<label for="cardNumberFirstFour" class="card-details_number-label">First Four Digits</label>
+					<input class="card-details_number-input" type="text" maxlength="4" name="card-number" value="0000" id="cardNumberFirstFour" data-input>
+				</div>
+				<div class="card-details_number-field">
+					<label for="cardNumberSecondFour" class="card-details_number-label">Second Four Digits</label>
+					<input class="card-details_number-input" type="text" maxlength="4" name="card-number" value="0000" id="cardNumberSecondFour" data-input>
+				</div>
+				<div class="card-details_number-field">
+					<label for="cardNumberThirdFour"
+					class="card-details_number-label">
+						Third Four Digits
+					</label>
+					<input class="card-details_number-input" type="text" maxlength="4" name="card-number" value="0000" id="cardNumberThirdFour" data-input>
+				</div>
+				<div class="card-details_number-field">
+					<label for="cardNumberFirstFour" class="card-details_number-label" maxlength>
+						Last Four Digits
+					</label>
+					<input class="card-details_number-input" type="text" maxlength="4" name="card-number" value="0000" id="cardNumberLastFour" data-input>
+				</div>
+				<div class="card-details_number-card">
+					<img class="card-details-number-card-image" src="https://svgshare.com/i/7h2.svg" alt="Visa card" data-card-image>
+			</div>
+		</fieldset>
+		<fieldset class="card-details_fieldset">
+			<span class="card-details_heading" aria-hidden="true">Card Holder Name</span>
+			<div class="card-details_holder">
+				<label class="card-details_holder-label" for="cardHolderName">Card Holder Name</label>
+				<input class="card-details_number-input" type="text" id="cardHolderName" data-input>
+			</div>
+		</fieldset>
+		<fieldset class="card-details_fieldset">
+			<div class="card-details-expiration">
+				<span class="card-details_heading" aria-hidden="true">Expiration Date</span>
+				<div class="card-details_expiration-date">
+					<label class="card-details_expiration-datel-label" for="expirationDate">Expiration Date</label>
+					<input class="card-details_expiration-date-input" type="text" maxlength="7" value="MM / YY" id="expirationDate" data-input>
+				</div>
+			<div class="card-details_security">
+				<span class="card-details_heading" aria-hidden="true">CVV</span>
+				<div class="card-details_details_security-code">
+					<label class="card-details_security-code-label" for="expirationonDate">CVV</label>
+					<input class="card-details_security-code-input" type="text" maxlength="3" value="000" id="expirationonDate" data-input>
+				</div>
+			</div>
+		</fieldset>
+		<button class="card-details_submit" type="button" data-submit-button>Purchase</button>
+		<script src="main.js"></script>
+	</form>
+	</section>
+</body>
+	</html>
+</div>

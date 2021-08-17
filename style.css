@@ -1,0 +1,241 @@
+*. *:before, *:after{
+	box-sizing: border-box;
+}
+html{
+	font-size: 16;
+}
+body{
+	background: linear-gradient(to right, #f00f55 0%, #fa0f89 100%);
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	letter-spacing: 0.03em;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothin:  antialiased;
+}
+p, a{
+	color: #fff;
+}
+img
+{
+	display: block;
+	width: 100%;
+}
+select, input {
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	letter-spacing: 0.03em;
+}
+.container {
+	position: relative;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding-right: 15px;
+	padding-left: 15px;
+}
+.product{
+	width: 100%;
+	max-width: 750px;
+	margin-bottom: 15px;
+}
+.card-details{
+	position: relative;
+	padding: 25px;
+	background: linear-gradient(to right, #013552 0%, #00324e 100%);
+	color: #fff;
+}
+.card-details_fieldset{
+	margin-top: 0;
+	margin-right: 0;
+	margin-bottom: 30px;
+	margin-left: 0;
+	padding: 0;
+	border: none;
+}
+.card-details_heading{
+	display: block;
+	font-size: 0.95em ;
+	font-weight: bold;
+}
+.card-details_cards{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-top: 20px;
+}
+.card-details_card-item{
+	position: relative;
+	width: 18%;
+	max-width: 53px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.card-details_card-input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	border: none;
+	cursor: pointer;
+	appearance: none;
+	z-index: 1;
+}
+.card-details_card-label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	text-indent: -9999px;
+	z-index: 0;
+}
+.card-details_cards-image{
+	border-radius: 5px;
+	opacity:  0.2;
+	transition: opacity 0.25s ease-in-out;
+}
+
+.card-details_card-input:checked ~ .card-details_cards-image, .card-details_card-input:hover ~ .card-details_cards-image, .card-details_card-input:focus ~ .card-details_cards-image{
+	opacity: 1;
+}
+.card-details_number{
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-end;
+	margin-top: 15px;
+}
+
+.card-details_number-field{
+	position: relative;
+	width: 15%;
+}
+
+.card-details_number-card{
+	width: 14%;
+	margin-left: 10px;
+	border-radius: 5px;
+	overflow: hidden;
+}
+.card-details_number-label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	text-indent: -9999px;
+	clip: rect(0, 0, 0);
+}
+
+.card-details_number-input, .card-details-expiration-date-input, .card-details_security-code-input{
+	width: 100%;
+	padding-bottom: 5px;
+	background-color: transparent;
+	border-top: none;
+	border-right: none;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+	border-left: none;
+	border-radius: 0;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 1em;
+	transition: all 0.25s ease-in-out;
+	appearance:  none;
+	text-align: center;
+}
+.card-details_number-input:focus, .card-details_expiration-date-input:focus, .card-details_security-code-input:focus, .card-details_card-input:active, .card-details-expiration-date-input:active, .card-details_security-code-input:active, .card-details_number-input--valid, .card-details_expiration-date-input--valid, .card-details_security-code-input--valid{
+	color: #d40b5e;
+	border-bottom: 2px solid #d40b5e;
+}
+.card-details_holder{
+	position: relative;
+	margin-top: 10px;
+}
+
+.card-details_holder-label, .card-details_expiration-date-label, .card-details_security-code-label{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	text-indent: -9999px;
+	clip: rect(0, 0, 0);
+}
+
+.card-details_holder-input{
+	width: 100%;
+	padding-bottom: 5px;	
+	background-color: transparent;
+	border-top: none;
+	border-right: none;
+	border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+	border-left: none;
+	border-radius: 0;
+	color: rgba(255, 255, 255, 0.3);
+	font-size: 1em;
+	transition: all 0.25s ease-in-out;
+	appearance:  none;
+}
+.card-details_holder-input:focus, .card-details_holder-input:active, .card-details_holder-input--valid{
+	color: #d40b5e;
+	border-bottom: 2px solid #d40b5e;
+}
+.card-details_expiration, .card-details_security {
+	display: inline-block;
+	vertical-align: middle;
+}
+.card-details_expiration{
+	margin-right: 50px;
+}
+.card-details_expiration-date{
+	position: relative;
+	max-width: 66px;
+	margin-top: 15px;
+}
+.card-details_details_security-code{
+	position: relative;
+	max-width: 29px;
+	margin-top: 15px;
+}
+.card-details_submit{
+	display: block;
+	width: 100%;
+	background: radial-gradient(elipse at center, #f93090 0%, #f10052 100%);
+	background-position: center;
+	background-repeat: no-repeat;
+	color: #fff;
+	border: none;
+	border-radius: 0;
+	padding: 16px 35px;
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	cursor: pointer;
+	appearance:  none;
+}
+@media screen and (min-width: 40em){
+	html, body{
+		position: relative;
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+	}
+	.card-details{
+		padding-right: 50px;
+		padding-bottom: 35px;
+		padding-left: 50px;
+	}
+	.card-details_holder{
+		width: calc(80% - 10px);
+	}
+}
+@media screen and (min-width:  47.938em){
+	.card-details{
+		max-width: 450px;
+		box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.35);
+	}
+	.card-details_fieldset:last-of-type{
+		margin-bottom: 0;
+	}
+}
